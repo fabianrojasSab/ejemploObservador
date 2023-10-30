@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>observador</title>
+</head>
+<body>
+	<input type="text" id="orden">
+	<button>agregar</button>
+
+	<ul>
+		
+	</ul>
+<script>
+
+
+const articulos = ['manzana', 'naranja']
+
+
+
+document.querySelector('button').addEventListener('click', () =>{
+	const input = document.querySelector('input')
+	const articulo = input.value
+	articulos.push(articulo)
+
+	mostrar(articulos)
+})
+
+
+function mostrar(elem){
+	var x = "";
+	var y = "";
+	for ( var key in elem) {
+		var x = key ;
+		var y = elem[key];
+		document.getElementById(x).value= y;
+  }  
+}
+
+</script>
+</body>
+</html>
